@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/app  # ホストの現在のディレクトリをコンテナの/appにマウント
+    ports:
+      - "3000:3000"  # ポートのマッピング
